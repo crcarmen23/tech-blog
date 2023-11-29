@@ -1,0 +1,92 @@
+{{log this}}
+{{!-- {{#each posts as |post| }} --}}
+<br>
+<br>
+<br>
+<div class="container card has-text-centered ">
+  <br>
+      <div class="card-image">
+  </div>
+  <div class="card-content has-text-centered">
+    <div class="media-center">
+      <div class="media-center">
+        <figure class="container image is-inline-block" id="post-image">
+          <img src="{{picture}}" alt="{{title}}">
+        </figure>
+      </div>
+      
+    </div>
+    <br>
+    <div class="media-content">
+        <p class="title is-4">{{title}}</p>
+      </div>
+    <div class="content is-size-5">
+      {{description}}
+    </div>
+  </div>
+</div>
+{{!-- {{/each}} --}}
+<article class="media m-5">
+  <figure class="media-left">
+    <br>
+    <p class="image is-64x64">
+      <br>
+      <img src="https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+      <br>
+      <p>
+        <br>
+        <strong>{{user.first_name}}{{user.last_name}}</strong> <small>{{user.email}}</small> <small>2 hrs</small>
+        <br>
+        {{#each comments as |comment|}}<br>
+        {{comment.text}}<br>
+        {{/each}}<br>
+        <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+      </p>
+    </div>
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-reply"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+        </a>
+        <a class="level-item">
+          <span class="icon is-small"><i class="fas fa-heart"></i></span>
+        </a>
+      </div>
+    </nav>
+  </div>
+</article>
+
+<article class="media m-5">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img src="https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="field">
+      <p class="control">
+        <textarea class="textarea" placeholder="Add a comment..."></textarea>
+      </p>
+    </div>
+    <nav class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <a class="button is-info">Submit</a>
+        </div>
+      </div>
+      <div class="level-right">
+        <div class="level-item">
+        </div>
+      </div>
+    </nav>
+  </div>
+</article>
+
+<script src="./js/post.js"></script>

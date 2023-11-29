@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="has-navbar-fixed-top">
+  <nav class="navbar is-fixed-top has-background-black" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item is-size-1" href="/">Tech Blog</a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+          {{#if logged_in}}
+        <a class="navbar-item is-hoverable" href="/dashboard">
+          Dashboard
+        </a>
+        <a class="navbar-item is-hoverable" href="/profile">
+          Profile
+        </a>
+         {{/if}}
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+        </div>
+        {{#if logged_in}}
+       <button class="button" id="logout">
+          <strong>Logout</strong>
+        </button>
+        {{else}}
+        <a class="button" href="/login">
+          <strong>Login</strong>
+        </a>
+        {{/if}}
+      </div>
+    </div>
+    </div>
+  </nav>
+  <main class="container-fluid ">
+    {{{ body }}}
+  </main>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+</html>

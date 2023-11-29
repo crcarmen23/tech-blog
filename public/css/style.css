@@ -1,0 +1,46 @@
+nav {
+    font-family: sans-serif;
+    color: rgb(45, 106, 53) !important;
+}
+
+nav a {
+    color: rgb(53, 115, 76) !important;
+}
+
+body,
+html {
+    height: 100%;
+    background-color: rgb(226, 226, 223);
+}
+
+.hero-text {
+    font-family: sans-serif;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(245, 241, 241);
+}
+
+#heroButton {
+    font-family: 'Bungee', sans-serif;
+    color: rgb(45, 106, 53);
+}
+
+#post-image {
+    width: 50%;
+    height: 50%;
+}
+
+#dash-title,
+#profile-greeting {
+    font-family: sans-serif;
+}
+
+#logout {
+    font-family: sans-serif;
+    color: rgb(45, 106, 53);
+}
